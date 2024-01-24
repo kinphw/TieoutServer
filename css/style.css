@@ -1,0 +1,36 @@
+@import "reset.css";
+
+body {
+    background-color: lightgray
+}
+
+div.divA, div.divB, div.divC {        
+    width : 400px;
+    height : 50px;
+    margin : 10px auto;
+    border : 2px solid;
+    /* text-align: center;     */
+    background-color: whitesmoke;
+    padding : 5px;
+
+}
+
+div.divA, div.divB {
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+div.divA {
+    font-weight : bold;
+    width : 300px;
+}
+
+div.divA:hover, div.divB:hover, div.divC:hover {
+    background-color: black;
+    color : white;
+}
+
+div.divStatus {
+    background-color: burlywood;    
+}
