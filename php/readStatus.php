@@ -1,22 +1,14 @@
 <?php       
         #exec("excel a.xlsx", $a, $b);    
-        $path = './status.txt';
-
-        if(isset($_GET['how'])) {
-            if($_GET['how'] == 'direct') {
-                $path = '../status.txt';
-            };
-        };
+        $path = $_SERVER['DOCUMENT_ROOT'].'/tieout/status.txt';
         
-        $tmp = file_exists($path);
-        
-        if($tmp) {
+        if(file_exists($path)) {
             $file = fopen($path, 'r');
             $msg = fgets($file);
-            #echo $msg;
+            
             fclose($file);
         } else {
-            echo "status CALL Failed";
+            echo "No status file...";
         };
 
         echo $msg;        

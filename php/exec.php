@@ -1,14 +1,11 @@
 <?php
 
-if(isset($_COOKIE["ExecFlag"])) {
-    echo "1분에 1번만 클릭할 수 있습니다. (과부하 방지)";        
+if (!(file_exists("c:/projects/tieout/workspace/a.htm"))) {
+    echo "No a.htm";
+} elseif (!(file_exists("c:/projects/tieout/workspace/b.htm"))) {
+    echo "No b.htm";
 } else {
-    $flag = setcookie("ExecFlag", 1, time()+60, "/");
-    if($flag) {
-        echo "COOKIE_SUCCESS";
-
-    } else {
-        echo "쿠키설정안됨";
-    }
+    exec("excel c:/projects/tieout/tieout.xlsb");
+    echo "Tie-out done. pls download the resulf file";
 }
 ?>
