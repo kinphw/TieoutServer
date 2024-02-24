@@ -12,6 +12,7 @@ $(document).ready(function(){ // JQuery
         } else {
             setCookie('tieout', true, 10); 
             console.log("first click");
+            alert("Clicked. 잠시 기다리세요.");
             $.ajax({
                 type:"GET",
                 url:"/tieout/php/exec.php",
@@ -19,7 +20,7 @@ $(document).ready(function(){ // JQuery
                     alert(res);
                     },
                 error:function(){
-                    alert("Main tool 호출실패");
+                    alert("error 발생. 그러나 분석시간이 오래걸리면 성공해도 error가 발생하니까 일단 산출물을 확인하세요."); // 완료되어도 왜 error가 반환되는지는 확인 필요함 240223
                 }
             })
 
