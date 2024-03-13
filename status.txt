@@ -1,1 +1,1 @@
-Tie-out : Checking Strings
+13:형식이 일치하지 않습니다

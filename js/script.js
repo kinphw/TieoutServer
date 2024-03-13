@@ -8,7 +8,7 @@ $(document).ready(function(){ // JQuery
         //deleteCookie('tieout');
 
         if(getCookie('tieout')) {
-            alert("과부하를 방지하기 위해 10초에 1번 클릭 가능합니다.");
+            alert("과부하를 방지하기 위해 10초에 1번 클릭 가능합니다..");
         } else {
             setCookie('tieout', true, 10); 
             console.log("first click");
@@ -27,27 +27,6 @@ $(document).ready(function(){ // JQuery
         };
         }
         );
-
-    // // 쿠키설정 성공시 진행하는 함수
-
-    // function doMain() {
-    //     $.ajax({
-    //         type:"GET",
-    //         url:"/tieout/php/execMain.php",
-    //         data: {
-    //             'ExecMain':1
-    //         },
-    //         success:function(res){
-    //             alert(res);
-    //         },
-    //         error:function(){
-    //             alert("CONNECTION FAIL");
-    //         }
-    //     }
-    //     )
-
-    // }
-
 
     // 주기적으로 업데이트
 
